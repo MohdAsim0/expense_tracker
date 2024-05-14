@@ -135,7 +135,8 @@ btn.addEventListener("click", () => {
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-let API_KEY = "AIzaSyAWJXYhKtvOKmrcHXSIyL3z33-5s4wTdKw";
+// let API_KEY = "AIzaSyAWJXYhKtvOKmrcHXSIyL3z33-5s4wTdKw";
+let API_KEY = "AIzaSyC_jrqagjvII4UnVUYOxJB5jWrakjhLfv0";
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
