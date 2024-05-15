@@ -1,9 +1,14 @@
 function validate() {
-    let firstname = document.forms["regForm"]["firstName"];
-    let lastname = document.forms["regForm"]["lastName"];
-    let email = document.forms["regForm"]["email"];
-    let password = document.forms["regForm"]["password"];
-    let cpassword = document.forms["regForm"]["cPassword"];
+    // let firstname = document.forms["regForm"]["firstName"];
+    // let lastname = document.forms["regForm"]["lastName"];
+    // let email = document.forms["regForm"]["email"];
+    // let password = document.forms["regForm"]["password"];
+    // let cpassword = document.forms["regForm"]["cPassword"];
+    let firstname = document.getElementById("fName");
+    let lastname = document.getElementById("lName");
+    let email = document.getElementById("gmail");
+    let password = document.getElementById("pass");
+    let cpassword = document.getElementById("cPass");
   
     console.log(firstname, lastname, email, password, cpassword);
   

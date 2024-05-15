@@ -52,7 +52,7 @@ function getData() {
     div.innerHTML = `
         <div class="transactionsleftCard">
         <p class="entries" >${ele.descriptionValue}</p>
-        <p >${ele.selectvalue}</p>
+        <p class="inc">${ele.selectvalue}</p>
         </div>
         <div>
         <p class=" entries ${ele.selectvalue}"><span>${
@@ -69,21 +69,21 @@ function getData() {
   totalIncome.innerText = `$ ${totalBalance} `;
   income.innerText = `$ ${incomeSum}`;
   expense.innerText = `$ ${expenseSum}`;
-  aipromt.innerHTML = `Total Balance is ${totalBalance} and Total Expense is ${expenseSum} learn how to manage with the help of AI  <br> <button id="askMebtn">Ask Me</button>`;
-  console.log(aipromt);
+  // aipromt.innerHTML = `Total Balance is ${totalBalance} and Total Expense is ${expenseSum} learn how to manage with the help of AI  <br> <button id="askMebtn">Ask Me</button>`;
+  // console.log(aipromt);
 
   updateChart(incomeSum, expenseSum);
 
-  const askMebtn = document.getElementById("askMebtn");
-  askMebtn.addEventListener("click", () => {
-    run(
-      `hi my income is ${incomeSum} and my expenses are ${expenseSum} help to manage this money`
-    );
+  // const askMebtn = document.getElementById("askMebtn");
+  // askMebtn.addEventListener("click", () => {
+  //   run(
+  //     `hi my income is ${incomeSum} and my expenses are ${expenseSum} help to manage this money`
+  //   );
 
-    rightContainer.append(aiContainer);
-    aiContainer.style.display = "block";
-    chart.style.display = "none";
-  });
+  //   rightContainer.append(aiContainer);
+  //   aiContainer.style.display = "block";
+  //   chart.style.display = "none";
+  // });
 }
 
 chartbtn.addEventListener("click", () => {
@@ -93,6 +93,7 @@ chartbtn.addEventListener("click", () => {
   chart.style.display = "block";
 });
 
+// AI
 ai.addEventListener("click", () => {
   rightContainer.append(aiContainer);
   aiContainer.style.display = "block";
@@ -181,7 +182,7 @@ function updateChart(incomeSum, expenseSum) {
       datasets: [
         {
           data: [incomeSum, expenseSum],
-          backgroundColor: ["#1B1A55", "#9290C3"], // Example colors
+          backgroundColor: ["#3acc43", "#9210C3"], // Example colors
         },
       ],
     },
