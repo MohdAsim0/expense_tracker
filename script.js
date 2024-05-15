@@ -1,5 +1,4 @@
-const leftContainer = document.getElementById("leftContainer");
-const home = document.getElementById("home");
+
 const ai = document.getElementById("ai");
 const chartbtn = document.getElementById("chartbtn");
 const tax = document.getElementById("tax");
@@ -12,8 +11,6 @@ const btn = document.getElementById("submit");
 const numberOfTransactions = document.getElementById("numberOfTransactions");
 const rightContainer = document.getElementById("rightContainer");
 const chart = document.getElementById("chart");
-const ctx = document.getElementById("myChart");
-const aipromt = document.getElementById("aiprompt");
 const geminiInput = document.getElementById("geminiInput");
 const geminiButton = document.getElementById("geminiButton");
 const middleContainer = document.getElementById("middleContainer");
@@ -21,8 +18,7 @@ const aiContainer = document.getElementById("aiContainer");
 // const askMebtn = document.getElementById('askMebtn');
 
 let totalBalance = 0;
-// let incomeSum = 0;
-// let expenseSum = 0;
+
 
 let transactionsArr = JSON.parse(localStorage.getItem("users")) || [];
 console.log(transactionsArr);
@@ -69,25 +65,13 @@ function getData() {
   totalIncome.innerText = `$ ${totalBalance} `;
   income.innerText = `$ ${incomeSum}`;
   expense.innerText = `$ ${expenseSum}`;
-  // aipromt.innerHTML = `Total Balance is ${totalBalance} and Total Expense is ${expenseSum} learn how to manage with the help of AI  <br> <button id="askMebtn">Ask Me</button>`;
-  // console.log(aipromt);
-
+ 
   updateChart(incomeSum, expenseSum);
 
-  // const askMebtn = document.getElementById("askMebtn");
-  // askMebtn.addEventListener("click", () => {
-  //   run(
-  //     `hi my income is ${incomeSum} and my expenses are ${expenseSum} help to manage this money`
-  //   );
 
-  //   rightContainer.append(aiContainer);
-  //   aiContainer.style.display = "block";
-  //   chart.style.display = "none";
-  // });
 }
 
 chartbtn.addEventListener("click", () => {
-  // rightContainer.innerHTML = "";
   rightContainer.append(chart);
   aiContainer.style.display = "none";
   chart.style.display = "block";
